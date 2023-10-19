@@ -1,0 +1,5 @@
+Ivanov 120 12.09.2022
+Petrov 0 15.08.2022
+Sidorov 1001 16.08.2022
+Chebishev 2000 20.09.2022
+Chebishev 3000 20.09.2022
