@@ -14,6 +14,7 @@ subjects = dict()
 with open("database.txt", "r") as source:
     for line in source:
         line_items = line.split()
+        print(line_items)
         sum = 0
         i = 1
         while i < len(line_items):
