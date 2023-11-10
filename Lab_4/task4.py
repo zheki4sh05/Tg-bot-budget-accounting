@@ -2,6 +2,7 @@
 # класса, статические, методы, методы класса.
 from datetime import date
 
+
 class User:
     def __init__(self, name, surname, age):
         self.__name = name
@@ -16,6 +17,7 @@ class User:
 
     def get_user_age(self):
         return self.__age
+
     @classmethod
     def get_instance(cls, name, surname, year):
         return cls(name, surname, date.today().year - year)
@@ -25,8 +27,8 @@ class User:
         return age >= 18
 
 
-user_1 = User("John","Smith", 18)
-user_2 = User.get_instance("Tom", "Brown",1989)
+user_1 = User("John", "Smith", 18)
+user_2 = User.get_instance("Tom", "Brown", 1989)
 
 if User.is_adult(user_1.get_user_age()):
     print(f'Пользователь {user_1.get_user_name()} уже совершеннолетний')
