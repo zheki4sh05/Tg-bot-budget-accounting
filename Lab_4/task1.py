@@ -7,22 +7,29 @@
 # Создайте объект класса. Напечатайте оба метода. Напечатайте переменную a.
 
 class Example:
-    op1 = 2
-    op2 = 3
-    op3 = 4
 
-    def create_new_var(self, val):
-        self.op4 = val
+    def __init__(self):
+        Example.op1 = 2
+        Example.op2 = 3
+
+    def create_new_var_4(self,val1):
+        self.op4 = val1
+        return self.op4
+
+    def create_new_var_5(self, val2):
+        self.op5 = val2
+        return self.op4
 
     def get_glob_sum(self):
         return self.op1 + self.op2
 
     def raise_val(self):
         Example.op1 = Example.op1 ** Example.op2
+        return Example.op1
 
 
 newExample = Example()
-newExample.create_new_var(12)
-print(f'Новая переменная {newExample.op4}')
-newExample.raise_val()
-print(f'Возведение в степень {newExample.op1}')
+print(f'Сумма 2-ух глобальных переменных {newExample.get_glob_sum()}')
+print(f'1 новая переменная {newExample.create_new_var_4(12)}')
+print(f'2 новая переменная {newExample.create_new_var_4(15)}')
+print(f'Возведение в степень {newExample.raise_val()}')
